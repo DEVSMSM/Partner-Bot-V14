@@ -130,4 +130,4 @@ connection.subscribe(player);
 
 //https://discord.gg/RMEQSbMtEk//ZEROCODES//
 
-client.login(config.token)// Token Botakat La Bashi config.json
+client.login(config.token)// Token Botakat La Bashi config.json dane
