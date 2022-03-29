@@ -56,6 +56,9 @@ if (message.content === "Reklam ?") {
 if (message.content === "reklam") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
 }
+if (message.content === "ریکلام هەیە") {
+        message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
+    }
 });
 //ZEROCODES//https://discord.gg/RMEQSbMtEk//ZEROCODES//
 //////////////
