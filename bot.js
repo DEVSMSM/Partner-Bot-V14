@@ -22,13 +22,6 @@ client.on('ready', async () => {
 
 ////////
 
-    client.on('messageCreate', async message => {
-  if (message.content.startsWith('reklam')) { message.reply('رێکلام لە تایبەت بۆم بنێرە ');
-  }
-});
-
-
-
 client.on("messageCreate", (message) => {
     if (message.content === "Reklam") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
@@ -60,6 +53,9 @@ client.on("messageCreate", (message) => {
 if (message.content === "Reklam ?") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
 }
+if (message.content === "reklam") {
+        message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
+}
 });
 //////////////
 client.on("messageCreate", async message => {
@@ -80,24 +76,24 @@ client.on('messageCreate',async (message) => {
     if (message.author.bot) return;
     if (message.channel.type == 'DM') {
       
-    let share = await client.channels.cache.get('933149605212848128'); ///// ID Channel Partner lera dane
+    let share = await client.channels.cache.get('IDCHANNEL'); //Id Channel Partner lera dane
     let args = await message.content.split(' ');
     let cool = await db.get(`cool_${message.author.id}`);
 
     if(!share) return console.log('ژووری رێکلام کار ناکات');
     if (cool > Date.now()) {
-        return await message.author.send({content : 'ببورە بۆ ماوەی يەك کاتژمێری تر ئەتوانی دوبارە رێکلام بکەی '}).catch(async (err) => {
+        return await message.author.send({content : 'ببورە بۆ ماوەی دوو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەی '}).catch(async (err) => {
             await message.channel.send({content : `${message.author} بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەیت`})
         }).catch(err => undefined);
     }
-    let time = await Date.now() + ms('1h');//الكول داون تقدر تعدل بكيفك
+    let time = await Date.now() + ms('2h');//الكول داون تقدر تعدل بكيفك
     try {
     await client.fetchInvite(args[0]).then(async (invite) => {
         await db.set(`cool_${message.author.id}`,time);
         await share.send({content: `${invite}\n\` رێکلام کرا لەلایەن\` ${message.author}`});
         await message.channel.send({content : `> ** رێکلام کرا لە ژووری ${share} تۆش بیکە **
-https://discord.gg/RMEQSbMtEk :white_check_mark:`}).catch(async (err) => {
-            await message.channel.send({content : `> **${message.author} The link has been posted ${share}**`});
+https://discord.gg/LinkServert :white_check_mark:`}).catch(async (err) => {
+            await message.channel.send({content : `> **${message.author} لینک سێرڤەرت دانرا لە بەشی ${share}**`});
         })
     }).catch(async (err) => {
         await message.channel.send({content: '> **:x: | ئەم لینکە هەڵەیە دوبارە بکەوە  !**'});
@@ -111,13 +107,13 @@ const discordVoice = require('@discordjs/voice');
 
  
 client.on('messageCreate', async (message) => {
-  if(message.author.id !== '349942964904001546' )
+  if(message.author.id !== 'UserId' )// ID Xot Lera dane 
   return;
-  if(message.content.startsWith(prefix + "join")) {const player = discordVoice.createAudioPlayer();
-const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`); // مكان الصوت . 
+  if(message.content.startsWith(prefix + "wara")) {const player = discordVoice.createAudioPlayer();
+const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`);
                     
 const connection = discordVoice.joinVoiceChannel({
-  channelId: "933151483103436830",
+  channelId: "", // Id Voice Lera Dane
   guildId: message.guild.id,
   adapterCreator: message.guild.voiceAdapterCreator,
 });
@@ -130,6 +126,6 @@ connection.subscribe(player);
 
 
 
-
+//https://discord.gg/RMEQSbMtEk//ZEROCODES//
 
 client.login(config.token)
