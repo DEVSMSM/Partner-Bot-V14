@@ -48,17 +48,17 @@ client.on("messageCreate", (message) => {
   if (message.content === "Reklam haya") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
   }
-  if (message.content === "اعلان") {
-        message.reply(`دز اعلان بل خاص`);
+  if (message.content === "Reklam?") {
+        message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
     }
   if (message.content === "REKLAM") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
   }
-  if (message.content === "Partner") {
-        message.reply(`Send Server link In Dm`);
+  if (message.content === "reklam?") {
+        message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
     }
-if (message.content === "partner") {
-        message.reply(`Send Server Link in Dm`);
+if (message.content === "Reklam ?") {
+        message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
 }
 });
 //////////////
@@ -86,7 +86,7 @@ client.on('messageCreate',async (message) => {
 
     if(!share) return console.log('ژووری رێکلام کار ناکات');
     if (cool > Date.now()) {
-        return await message.author.send({content : 'بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەیت'}).catch(async (err) => {
+        return await message.author.send({content : 'ببورە بۆ ماوەی يەك کاتژمێری تر ئەتوانی دوبارە رێکلام بکەی '}).catch(async (err) => {
             await message.channel.send({content : `${message.author} بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەیت`})
         }).catch(err => undefined);
     }
