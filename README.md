@@ -1,6 +1,7 @@
-# Partner-Bot-By-SmSm
+# Partner-Bot
 
-All Copyright By SmSm
+# All Copyright By SmSm
+https://discord.com/api/guilds/496754973883760650/widget.png?style=banner2
 Project discord.js V13
 
 Bashtren Boty Reklam La Discord 
