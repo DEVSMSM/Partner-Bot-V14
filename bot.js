@@ -97,7 +97,7 @@ client.on('messageCreate',async (message) => {
             await message.channel.send({content : `${message.author} بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەیت`})
         }).catch(err => undefined);
     }
-    let time = await Date.now() + ms('2h');
+    let time = await Date.now() + ms('30m');
     try {
     await client.fetchInvite(args[0]).then(async (invite) => {
         await db.set(`cool_${message.author.id}`,time);
