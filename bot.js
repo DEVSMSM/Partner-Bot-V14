@@ -93,7 +93,7 @@ client.on('messageCreate',async (message) => {
 
     if(!share) return console.log('ژووری رێکلام کار ناکات');
     if (cool > Date.now()) {
-        return await message.author.send({content : 'ببورە بۆ ماوەی دوو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەی '}).catch(async (err) => {
+        return await message.author.send({content : 'ببورە بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەی '}).catch(async (err) => {
             await message.channel.send({content : `${message.author} بۆ ماوەی نیو کاتژمێری تر ئەتوانی دوبارە رێکلام بکەیت`})
         }).catch(err => undefined);
     }
