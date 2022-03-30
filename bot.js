@@ -1,14 +1,8 @@
 const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 const { Client } = require('discord.js');
 require('discord-reply');
 require('@discordjs/voice');
-const client = new Client({ partials: ["CHANNEL"], intents: 32767 });
+const client = new Client({ partials: ["CHANNEL", "MESSAGES", "GUILD_MEMBERS", "DIRECT_MESSAGES"], intents: 32767 });
 const db = require('pro.db');
 const ms = require('ms');
 const config = require('./config.json');
