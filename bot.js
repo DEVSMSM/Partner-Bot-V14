@@ -1,6 +1,5 @@
 const express = require('express');
 const { Client } = require('discord.js');
-require('discord-reply');
 require('@discordjs/voice');
 const client = new Client({ partials: ["CHANNEL", "MESSAGES", "GUILD_MEMBERS", "DIRECT_MESSAGES"], intents: 32767 });
 const db = require('pro.db');
