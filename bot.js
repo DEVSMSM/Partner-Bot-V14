@@ -109,9 +109,9 @@ https://discord.gg/LinkServert :white_check_mark:`}).catch(async (err) => {
 //ZEROCODES//https://discord.gg/RMEQSbMtEk//ZEROCODES//
 const { joinVoiceChannel } = require('@discordjs/voice');
 
-let GUILD = client.guilds.cache.get('Guild ID');
+let GUILD = client.guilds.cache.get('ID Server');
 const connection = joinVoiceChannel({
-    channelId: 'Channel ID',
+    channelId: 'ID Voice',
     guildId: GUILD.id,
     adapterCreator: GUILD.voiceAdapterCreator,
     selfDeaf: false
