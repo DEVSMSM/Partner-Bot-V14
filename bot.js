@@ -107,26 +107,16 @@ https://discord.gg/LinkServert :white_check_mark:`}).catch(async (err) => {
     }}
 })
 //ZEROCODES//https://discord.gg/RMEQSbMtEk//ZEROCODES//
-const discordVoice = require('@discordjs/voice');
+const { joinVoiceChannel } = require('@discordjs/voice');
 
- 
-client.on('messageCreate', async (message) => {
-  if(message.author.id !== 'UserId' )// ID Xot Lera dane 
-  return;
-  if(message.content.startsWith(prefix + "wara")) {const player = discordVoice.createAudioPlayer();
-const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`);
-                    
-const connection = discordVoice.joinVoiceChannel({
-  channelId: "", // Id Voice Lera Dane
-  guildId: message.guild.id,
-  adapterCreator: message.guild.voiceAdapterCreator,
+let GUILD = client.guilds.cache.get('Guild ID');
+const connection = joinVoiceChannel({
+    channelId: 'Channel ID',
+    guildId: GUILD.id,
+    adapterCreator: GUILD.voiceAdapterCreator,
+    selfDeaf: false
 });
-
-player.play(resource);
-connection.subscribe(player);
-
-  }
-}) 
+connection;  
 
 
 
