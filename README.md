@@ -16,5 +16,4 @@ Dont Forget Give 🌟 Project And Thank You All
 
 
 
-# Link My Discord 👇
-<a href="https://discord.gg/7MaVp5HCSh"><img src="https://discord.com/api/guilds/520281557714468878/widget.png?style=banner2"></a>
+# [Link](https://discord.gg/7MaVp5HCSh) My Discord 
