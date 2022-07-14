@@ -1,5 +1,7 @@
 {
+         "prefix": "Your Bot Prefix"
+         "token": "Your Bot Token"
 	 "partner": "ID Your Partner Channel",
-	 "link": "Your Server Link",
-	 "joinvc": "Type Any Thing Here Bot Come Vc"
+	 "link": "Your Link Server",
+	 "joinvc": "Type Any Thing Here Bot Come Vc With Prefix"
 }
