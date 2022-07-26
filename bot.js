@@ -136,26 +136,26 @@ client.on('messageCreate',async (message) => {
 
 
 
-client.on("ready", () =>{
-}) 
-const { joinVoiceChannel } = require('@discordjs/voice');
-client.on('messageCreate', message => {
-	try{
-		if(!message.member.voice) return message.reply(`**Join Vc First**`)
-    if(message.content.startsWith( prefix + joinvc )) {
-        joinVoiceChannel({
-            channelId: message.member.voice.channel.id,
-            guildId: message.guild.id,
-            adapterCreator: message.guild.voiceAdapterCreator,
-					selfDeaf: false
+const discordVoice = require('@discordjs/voice');
 
-        })
-    message.reply(`**Joined Vc**`)
-		}
-	} catch (err) {
-  console.log(err)
-}
-})
+ 
+client.on('messageCreate', async (message) => {
+  if(message.author.id !== '349942964904001546' )
+  return;
+  if(message.content.startsWith(prefix + "join")) {const player = discordVoice.createAudioPlayer();
+const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`); // مكان الصوت . 
+                    
+const connection = discordVoice.joinVoiceChannel({
+  channelId: "933151483103436830",
+  guildId: message.guild.id,
+  adapterCreator: message.guild.voiceAdapterCreator,
+});
+
+player.play(resource);
+connection.subscribe(player);
+
+  }
+}) 
 
 
 //https://discord.gg/RMEQSbMtEk//ZEROCODES//
