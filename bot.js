@@ -12,7 +12,7 @@ require('@discordjs/voice');
 const client = new Client({ partials: ["CHANNEL", "MESSAGES", "GUILD_MEMBERS", "DIRECT_MESSAGES"], intents: 32767 });
 const db = require('pro.db');
 const ms = require('ms');
-const { token , joinvc, partner, link, prefix}  = require('./config.json');
+const { token , joinvc, partner, link, prefix, idvc, owner }  = require('./config.json');
 client.on('ready',async () => {  await console.log(client.user.tag);})
 client.on('ready', async () => {
  
@@ -140,13 +140,13 @@ const discordVoice = require('@discordjs/voice');
 
  
 client.on('messageCreate', async (message) => {
-  if(message.author.id !== '349942964904001546' )
+  if(message.author.id !== owner )
   return;
-  if(message.content.startsWith(prefix + "join")) {const player = discordVoice.createAudioPlayer();
-const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`); // مكان الصوت . 
+  if(message.content.startsWith(prefix + joinvc )) {const player = discordVoice.createAudioPlayer();
+const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`);
                     
 const connection = discordVoice.joinVoiceChannel({
-  channelId: "933151483103436830",
+  channelId: `${idvc}`,
   guildId: message.guild.id,
   adapterCreator: message.guild.voiceAdapterCreator,
 });
