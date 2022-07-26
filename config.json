@@ -3,5 +3,7 @@
          "token": "Your Bot Token"
 	 "partner": "ID Your Partner Channel",
 	 "link": "Your Link Server",
+         "idvc": "Your Voice ID",
+         "owner": "Your Id"
 	 "joinvc": "Type Any Thing Here Bot Come Vc With Prefix"
 }
