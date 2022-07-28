@@ -12,7 +12,7 @@ require('@discordjs/voice');
 const client = new Client({ partials: ["CHANNEL", "MESSAGES", "GUILD_MEMBERS", "DIRECT_MESSAGES"], intents: 32767 });
 const db = require('pro.db');
 const ms = require('ms');
-const { token , joinvc, partner, link, prefix, idvc, owner }  = require('./config.json');
+const { token , partner, link, idvc }  = require('./config.json');
 client.on('ready',async () => {  await console.log(client.user.tag);})
 client.on('ready', async () => {
  
@@ -136,26 +136,19 @@ client.on('messageCreate',async (message) => {
 
 
 
-const discordVoice = require('@discordjs/voice');
+client.on("ready", async() => {
+const { joinVoiceChannel } = require('@discordjs/voice'); 
 
- 
-client.on('messageCreate', async (message) => {
-  if(message.author.id !== owner )
-  return;
-  if(message.content.startsWith(prefix + joinvc )) {const player = discordVoice.createAudioPlayer();
-const resource = discordVoice.createAudioResource(`https://youtu.be/56lkofpjOAs`);
-                    
-const connection = discordVoice.joinVoiceChannel({
-  channelId: `${idvc}`,
-  guildId: message.guild.id,
-  adapterCreator: message.guild.voiceAdapterCreator,
-});
-
-player.play(resource);
-connection.subscribe(player);
-
-  }
-}) 
+client.channels.fetch(`${idvc}`).then((channel) => { 
+  console.log(`${client.user.tag} Connected To Voice`) 
+const VoiceConnection = joinVoiceChannel({ channelId: channel.id, 
+guildId: channel.guild.id, 
+adapterCreator: channel.guild.voiceAdapterCreator,
+selfDeaf: false,
+selfMute: false
+  }); 
+     });
+  }); 
 
 
 //https://discord.gg/RMEQSbMtEk//ZEROCODES//
