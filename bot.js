@@ -1,12 +1,3 @@
-const express = require('express')
-const app = express()
-
-app.get('/', function (req, res) {
-  res.send('GG MEN')
-})
-
-app.listen(3000)
-
 const { Client } = require('discord.js');
 require('@discordjs/voice');
 const client = new Client({ partials: ["CHANNEL", "MESSAGES", "GUILD_MEMBERS", "DIRECT_MESSAGES"], intents: 32767 });
