@@ -135,8 +135,8 @@ client.channels.fetch(`${idvc}`).then((channel) => {
 const VoiceConnection = joinVoiceChannel({ channelId: channel.id, 
 guildId: channel.guild.id, 
 adapterCreator: channel.guild.voiceAdapterCreator,
-selfDeaf: false,
-selfMute: false
+selfDeaf: true,
+selfMute: true
   }); 
      });
   }); 
