@@ -128,6 +128,7 @@ client.on('messageCreate',async (message) => {
 
 
 client.on("ready", async() => {
+ try{
 const { joinVoiceChannel } = require('@discordjs/voice'); 
 
 client.channels.fetch(`${idvc}`).then((channel) => { 
@@ -139,7 +140,10 @@ selfDeaf: true,
 selfMute: true
   }); 
      });
-  }); 
+  } catch (err) {
+console.log(err)
+}
+});
 
 
 //https://discord.gg/RMEQSbMtEk//ZEROCODES//
