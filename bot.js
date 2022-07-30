@@ -101,10 +101,10 @@ client.on('messageCreate',async (message) => {
     if(!share) return;
     if (cool > Date.now()) {
         return await message.author.send({content : 'Sorry You Can Send Your Ad Again After 30m '}).catch(async (err) => {
-            await message.channel.send({content : `${message.author} Sorry You Can Send Your Ad Again After 30m `})
+            await message.channel.send({content : `${message.author} Sorry You Can Send Your Ad Again After 1 hour `})
         }).catch(err => undefined);
     }
-    let time = await Date.now() + ms('30m');
+    let time = await Date.now() + ms('60m');
     try {
     await client.fetchInvite(args[0]).then(async (invite) => {
         await db.set(`cool_${message.author.id}`,time);
