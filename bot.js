@@ -23,7 +23,7 @@ client.on("messageCreate", (message) => {
     if (message.content === "ريكلام") {
         message.reply(`رێکلام لە شەخسی بۆم بنێرە`);
     }
-  if (message.content === "ریکلام") {
+  if (message.content === "رێکلام") {
         message.reply(`رێکلام لە تایبەت بۆم بنێرە`);
   }
   if (message.content === "reklam haya") {
