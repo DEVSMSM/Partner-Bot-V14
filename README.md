@@ -20,7 +20,7 @@ All Copyright By SmSm
 
 
 [![Run on Repl.it](https://replit.com/badge/github/DEVSMSM/Partner-Bot-V14)](https://replit.com/new/github/DEVSMSM/Partner-Bot-V14)
-
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/https://github.com/DEVSMSM/Partner-Bot-V14/https://github.com/DEVSMSM/Partner-Bot-V14)
 
 Dont Forget Give 🌟 Project And Thank You All
 
