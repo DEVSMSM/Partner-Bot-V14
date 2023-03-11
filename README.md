@@ -3,7 +3,7 @@ All Copyright By SmSm
 
 <img src = "https://discord.c99.nl/widget/theme-2/349942964904001546.png"></div>
 
--Best Advertising Bot to Share Servers
+- Best Advertising Bot to Share Servers
 
 
 
