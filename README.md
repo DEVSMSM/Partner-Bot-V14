@@ -8,9 +8,9 @@ All Copyright By SmSm
 
 
 # Features 
-1.Bot Will Just Advertising Link Servers.
-2.Bot Work With Out Admin Permission.
-3.Bot Reply Users in any Chat If They Asked For Advertising.
+- Bot Will Just Advertising Link Servers.
+- Bot Work With Out Admin Permission.
+- Bot Reply Users in any Chat If They Asked For Advertising.
 
 
 
